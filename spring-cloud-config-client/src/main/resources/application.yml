@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: application    # must match file in config repo (application.yml / application-dev.yml)
+  profiles:
+    active: dev
+  config:
+    import: "optional:configserver:http://localhost:8888"
