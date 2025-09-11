@@ -1,0 +1,3 @@
+# Ignore all application.yml and application.properties in any module
+**/src/main/resources/application.yml
+**/src/main/resources/application.properties
