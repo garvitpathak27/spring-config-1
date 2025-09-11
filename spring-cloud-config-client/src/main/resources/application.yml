@@ -3,8 +3,20 @@ server:
 
 spring:
   application:
-    name: application    # must match file in config repo (application.yml / application-dev.yml)
+    name: application
   profiles:
-    active: dev
+    active: prod
   config:
     import: "optional:configserver:http://localhost:8888"
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,busrefresh

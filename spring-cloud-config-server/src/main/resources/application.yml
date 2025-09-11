@@ -9,4 +9,15 @@ spring:
       server:
         git:
           uri: git@github.com:garvitpathak27/config-repo-1.git
-          clone-on-start: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,busrefresh
